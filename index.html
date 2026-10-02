@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e9">
+  <meta name="description" content="Meet Ronald Old Dog Bone Dougherty, Rufus Reviews, and the Old Dougherty Dog boys. Wisdom, reviews, and a whole lot of dog.">
+  <meta property="og:title" content="Old Dog Bone — Wisdom with a wag to it">
+  <meta property="og:description" content="Meet the characters. Watch the stories. Stay for the dog logic.">
+  <meta property="og:image" content="assets/images/logos/OldDogBone_icon%203.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://olddogbone.com/">
+  <title>Old Dog Bone — Wisdom with a wag to it</title>
+  <link rel="canonical" href="https://olddogbone.com/">
+  <link rel="icon" type="image/png" href="assets/images/logos/OldDogBone_icon%205.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Rye&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18211f;
+      --paper: #f5f2e9;
+      --blue: #b8dfe1;
+      --blue-deep: #174c55;
+      --red: #d84b38;
+      --yellow: #f3c54d;
+      --lime: #d8e58c;
+      --line: rgba(24, 33, 31, .2);
+      --display: "Rye", Georgia, serif;
+      --body: "DM Sans", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+    .skip-link {
+      position: fixed;
+      z-index: 20;
+      top: 8px;
+      left: 8px;
+      padding: 10px 14px;
+      transform: translateY(-150%);
+      background: var(--ink);
+      color: white;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .site-header {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 76px;
+      padding: 10px clamp(20px, 5vw, 76px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(245, 242, 233, .94);
+      backdrop-filter: blur(12px);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      text-decoration: none;
+      font-family: var(--display);
+      font-size: 18px;
+      line-height: 1.1;
+    }
+    .brand img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+    .brand span { max-width: 130px; }
+    .main-nav { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 36px); }
+    .main-nav a {
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .main-nav a:hover { color: var(--red); }
+    .main-nav .nav-follow { color: var(--red); }
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr);
+      align-items: center;
+      min-height: min(690px, calc(100svh - 76px));
+      overflow: hidden;
+      padding: 48px clamp(24px, 7.4vw, 112px) 56px;
+      background-color: var(--blue);
+      background-image: radial-gradient(rgba(23, 76, 85, .13) .8px, transparent .8px);
+      background-size: 13px 13px;
+    }
+    .hero::after {
+      position: absolute;
+      right: -100px;
+      bottom: -175px;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(23, 76, 85, .2);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+    .hero-copy { position: relative; z-index: 1; max-width: 560px; padding: 30px 0; animation: arrive .65s both; }
+    .eyebrow, .chapter-label {
+      margin: 0 0 16px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    .eyebrow { color: var(--blue-deep); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.08; }
+    h1 { max-width: 520px; margin-bottom: 20px; font-size: clamp(48px, 6.4vw, 86px); }
+    .hero-copy > p:not(.eyebrow) { max-width: 450px; margin-bottom: 28px; font-size: 18px; }
+    .button-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 19px;
+      border: 2px solid var(--ink);
+      border-radius: 3px;
+      background: var(--ink);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .18s ease, background-color .18s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: var(--blue-deep); }
+    .button--light { background: transparent; color: var(--ink); }
+    .button--light:hover { background: var(--paper); color: var(--ink); }
+    .hero-art {
+      position: relative;
+      z-index: 1;
+      justify-self: center;
+      width: min(100%, 500px);
+      aspect-ratio: 1;
+      overflow: hidden;
+      border: 8px solid var(--paper);
+      border-radius: 50%;
+      background: var(--paper);
+      box-shadow: 12px 14px 0 rgba(24, 33, 31, .12);
+      animation: arrive .75s .1s both;
+    }
+    .hero-art img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-stamp {
+      position: absolute;
+      right: 4%;
+      bottom: 9%;
+      z-index: 2;
+      display: grid;
+      width: 112px;
+      aspect-ratio: 1;
+      place-items: center;
+      padding: 12px;
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+      background: var(--yellow);
+      font-family: var(--display);
+      font-size: 15px;
+      line-height: 1.15;
+      text-align: center;
+      transform: rotate(9deg);
+    }
+    .trail {
+      display: flex;
+      justify-content: space-around;
+      gap: 14px;
+      padding: 17px 24px;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .trail a { font-size: 11px; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+    .trail a:hover { color: var(--red); }
+    .trail span { margin-right: 8px; color: var(--red); }
+    .chapter {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(220px, .8fr) minmax(190px, .55fr) minmax(250px, .8fr);
+      align-items: center;
+      gap: clamp(22px, 4vw, 60px);
+      min-height: 650px;
+      overflow: hidden;
+      padding: 76px clamp(24px, 8vw, 120px);
+      scroll-margin-top: 76px;
+    }
+    .chapter--teacher { background: var(--lime); }
+    .chapter--rufus { background: #f0bd72; }
+    .chapter--boys { background: #ed7960; }
+    .chapter-copy { position: relative; z-index: 2; max-width: 380px; }
+    .chapter-label { color: var(--blue-deep); }
+    .chapter--rufus .chapter-label { color: #63371b; }
+    .chapter--boys .chapter-label { color: #5e2119; }
+    h2 { margin-bottom: 18px; font-size: clamp(36px, 4.2vw, 58px); }
+    .chapter-copy > p:not(.chapter-label) { max-width: 360px; margin-bottom: 24px; font-size: 16px; }
+    .episode-title { margin: 20px 0 0; font-size: 13px; font-weight: 700; }
+    .episode-kicker { margin: 0; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+    .episode-link { display: inline-block; margin-top: 7px; color: var(--blue-deep); font-size: 12px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .video-wrap { position: relative; z-index: 2; width: min(100%, 270px); justify-self: center; }
+    .video-frame {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border: 5px solid var(--ink);
+      border-radius: 8px;
+      background: #101514;
+      box-shadow: 8px 10px 0 rgba(24, 33, 31, .16);
+    }
+    .video-frame iframe { width: 100%; height: 100%; border: 0; }
+    .character-art { position: relative; z-index: 1; align-self: end; justify-self: center; width: 100%; max-width: 350px; height: 510px; }
+    .character-art img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
+    .chapter--teacher .character-art img { filter: drop-shadow(9px 12px 0 rgba(24, 33, 31, .12)); }
+    .chapter--rufus .character-art img { filter: drop-shadow(9px 12px 0 rgba(24, 33, 31, .14)); }
+    .chapter--boys .character-art { max-width: 370px; height: 390px; }
+    .boys-art { position: relative; width: 100%; height: 100%; }
+    .boys-art img { position: absolute; bottom: 0; width: auto; object-fit: contain; object-position: center bottom; }
+    .boys-art img:nth-child(1) { left: 0; z-index: 2; height: 85%; max-width: 46%; }
+    .boys-art img:nth-child(2) { left: 50%; z-index: 1; height: 100%; max-width: 83%; transform: translateX(-50%); }
+    .boys-art img:nth-child(3) { right: 0; z-index: 2; height: 64%; max-width: 40%; }
+    .merch {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 36px;
+      padding: 76px clamp(24px, 9vw, 136px);
+      background: var(--blue-deep);
+      color: white;
+      scroll-margin-top: 76px;
+    }
+    .merch .chapter-label { color: var(--yellow); }
+    .merch h2 { max-width: 700px; margin-bottom: 14px; }
+    .merch p:not(.chapter-label) { max-width: 570px; margin-bottom: 0; color: rgba(255, 255, 255, .83); }
+    .merch .button { border-color: var(--yellow); background: var(--yellow); color: var(--ink); }
+    .merch .button:hover { background: white; }
+    .donate {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 30px;
+      padding: 58px clamp(24px, 9vw, 136px);
+      background: var(--yellow);
+      scroll-margin-top: 76px;
+    }
+    .donate h2 { margin-bottom: 12px; font-size: clamp(30px, 3.5vw, 46px); }
+    .donate p { max-width: 650px; margin-bottom: 0; }
+    .donate .button { flex-shrink: 0; }
+    .fine-print { margin-top: 12px !important; font-size: 11px; }
+    .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px clamp(24px, 5vw, 76px);
+      background: var(--ink);
+      color: white;
+    }
+    .footer-brand { font-family: var(--display); font-size: 14px; }
+    .social-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .social-links a { font-size: 12px; font-weight: 700; text-decoration: none; }
+    .social-links a:hover { color: var(--yellow); }
+    .copyright { margin: 0; color: rgba(255,255,255,.65); font-size: 11px; }
+    @keyframes arrive { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr); padding-right: 5vw; padding-left: 5vw; }
+      .hero-art { width: min(100%, 400px); }
+      .chapter { grid-template-columns: minmax(180px, .8fr) minmax(170px, .65fr) minmax(180px, .7fr); gap: 20px; padding-right: 5vw; padding-left: 5vw; }
+      .character-art { height: 440px; }
+    }
+    @media (max-width: 700px) {
+      .site-header { position: static; flex-wrap: wrap; gap: 10px; padding: 8px 18px 12px; }
+      .brand { font-size: 15px; }
+      .brand img { width: 40px; height: 40px; }
+      .main-nav { display: grid; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; overflow: visible; padding: 5px 0 2px; }
+      .main-nav a { font-size: 11px; }
+      .main-nav .nav-follow { grid-column: 1 / -1; justify-self: start; }
+      .hero { grid-template-columns: 1fr; gap: 12px; min-height: auto; padding: 22px 22px 26px; }
+      .hero-copy { padding: 4px 0 0; }
+      h1 { max-width: 360px; font-size: clamp(34px, 10.5vw, 44px); }
+      .hero-copy > p:not(.eyebrow) { margin-bottom: 18px; font-size: 16px; }
+      .hero .button { gap: 6px; padding: 0 12px; font-size: 12px; }
+      .hero-art { width: min(60vw, 230px); }
+      .hero-stamp { right: 7%; bottom: 4%; width: 88px; font-size: 12px; }
+      .trail { justify-content: flex-start; overflow-x: auto; padding: 14px 20px; }
+      .trail a { flex: 0 0 auto; font-size: 10px; }
+      .chapter { grid-template-columns: minmax(0, 1fr) minmax(110px, .62fr); gap: 20px 12px; min-height: auto; padding: 50px 22px; }
+      .chapter-copy { grid-column: 1 / -1; }
+      .chapter-copy > p:not(.chapter-label) { max-width: 490px; }
+      .video-wrap { grid-column: 1; grid-row: 2; width: min(100%, 240px); justify-self: start; }
+      .character-art { grid-column: 2; grid-row: 2; width: 100%; height: 340px; }
+      .chapter--boys .character-art { height: 280px; }
+      .chapter--boys .video-wrap { grid-column: 2; grid-row: 2; justify-self: end; width: min(100%, 220px); }
+      .chapter--boys .character-art { grid-column: 1; grid-row: 2; }
+      .merch, .donate { grid-template-columns: 1fr; gap: 24px; padding: 50px 22px; }
+      .merch .button, .donate .button { justify-self: start; }
+      .site-footer { align-items: flex-start; flex-direction: column; padding: 26px 22px; }
+      .social-links { gap: 14px; }
+    }
+    @media (max-width: 400px) {
+      .chapter { grid-template-columns: minmax(0, 1fr) minmax(96px, .58fr); }
+      .video-wrap { width: min(100%, 205px); }
+      .chapter--boys .video-wrap { width: min(100%, 190px); }
+      .character-art { height: 280px; }
+      .chapter--boys .character-art { height: 230px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Old Dog Bone home">
+      <img src="assets/images/logos/OldDogBone_icon%205.png" alt="">
+      <span>Old Dog Bone</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#teacher">Old Dog Teacher</a>
+      <a href="#rufus">Rufus Reviews</a>
+      <a href="#the-boys">The Boys</a>
+      <a href="#merch">Merch</a>
+      <a class="nav-follow" href="https://www.youtube.com/@olddogbone" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Three worlds. One very opinionated pack.</p>
+        <h1 id="hero-title">Old Dog Bone</h1>
+        <p>Some wisdom, some movie reviews, and a whole lot of dog logic. Come meet the characters who have something to say about just about everything.</p>
+        <div class="button-row">
+          <a class="button" href="#teacher">Meet the pack <span aria-hidden="true">↓</span></a>
+          <a class="button button--light" href="https://www.youtube.com/@olddogbone" target="_blank" rel="noopener noreferrer">Watch the channel <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <img src="assets/images/olddogbone_youngpup_3.png" alt="Old Dog Bone and a young pup watching the rain together">
+      </figure>
+      <div class="hero-stamp" aria-hidden="true">Good stories.<br>Good dogs.</div>
+    </section>
+
+    <nav class="trail" aria-label="Meet the characters">
+      <a href="#teacher"><span>01</span> Old Dog Teacher</a>
+      <a href="#rufus"><span>02</span> Rufus Reviews</a>
+      <a href="#the-boys"><span>03</span> The Boys</a>
+    </nav>
+
+    <section class="chapter chapter--teacher" id="teacher" aria-labelledby="teacher-title">
+      <div class="chapter-copy">
+        <p class="chapter-label">01 / The old soul</p>
+        <h2 id="teacher-title">Old Dog Teacher</h2>
+        <p>Ronald “Old Dog Bone” Dougherty has seen a thing or two. He passes a little hard-earned wisdom down to Young Pup, one folksy metaphor at a time.</p>
+        <p class="episode-kicker">A thought from Ronald</p>
+        <p class="episode-title">“The goal in life is the chase, not the catch.”</p>
+        <a class="episode-link" href="https://www.youtube.com/shorts/m_mk8o4WRCc" target="_blank" rel="noopener noreferrer">Watch the Short <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="video-wrap">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/m_mk8o4WRCc?rel=0" title="Old Dog Teacher: The goal in life is the chase, not the catch" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <figure class="character-art">
+        <img src="assets/images/Ronald_on_couch_nobg.png" alt="Ronald Old Dog Bone Dougherty settled into his favorite chair" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="chapter chapter--rufus" id="rufus" aria-labelledby="rufus-title">
+      <div class="chapter-copy">
+        <p class="chapter-label">02 / The film critic</p>
+        <h2 id="rufus-title">Rufus Reviews</h2>
+        <p>Rufus watches the movies so you don’t have to. Expect a gruff, deadpan review from a dog who has his own standards and absolutely no patience for nonsense.</p>
+        <p class="episode-kicker">On the review couch</p>
+        <p class="episode-title">“John Wick, Air Bud, &amp; Cats Review: THERE'S RUNNING?!”</p>
+        <a class="episode-link" href="https://www.youtube.com/shorts/k1M4E45T9eo" target="_blank" rel="noopener noreferrer">Watch the Short <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="video-wrap">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/k1M4E45T9eo?rel=0" title="Rufus Reviews: John Wick, Air Bud, and Cats" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <figure class="character-art">
+        <img src="assets/images/Rufus_2_couch_nobg.png" alt="Rufus lounging on the couch, ready with a review" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="chapter chapter--boys" id="the-boys" aria-labelledby="boys-title">
+      <div class="chapter-copy">
+        <p class="chapter-label">03 / The group chat</p>
+        <h2 id="boys-title">Old Dougherty Dog &amp; the Boys</h2>
+        <p>Old Dougherty Dog, Ol’ Boy, and Boy Ol’ Boy have plenty to say and not much of a filter. Pull up a seat; the conversation is already going somewhere.</p>
+        <p class="episode-kicker">The boys have a point</p>
+        <p class="episode-title">“Fellas, follow your nose.”</p>
+        <a class="episode-link" href="https://www.youtube.com/shorts/MsKhbwsTTjw" target="_blank" rel="noopener noreferrer">Watch the Short <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="video-wrap">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/MsKhbwsTTjw?rel=0" title="Old Dougherty Dog and the Boys: Fellas, follow your nose" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <figure class="character-art" aria-label="Old Dougherty Dog, Ol’ Boy, and Boy Ol’ Boy">
+        <div class="boys-art">
+          <img src="assets/images/memedog_olboy_nobg.png" alt="Ol’ Boy in a blue cap" loading="lazy">
+          <img src="assets/images/memedog_oldoughertydog_nobg.png" alt="Ol’ Dougherty Dog seated in his rocking chair" loading="lazy">
+          <img src="assets/images/memedog_boyolboy_nobg.png" alt="Boy Ol’ Boy in a yellow hoodie" loading="lazy">
+        </div>
+      </figure>
+    </section>
+
+    <section class="merch" id="merch" aria-labelledby="merch-title">
+      <div>
+        <p class="chapter-label">For the pack</p>
+        <h2 id="merch-title">Good things are coming.</h2>
+        <p>We’re dreaming up Old Dog Bone gear for the folks who want to take a little dog wisdom with them. The shop is still in the works.</p>
+      </div>
+      <a class="button" href="https://www.instagram.com/olddogbone/" target="_blank" rel="noopener noreferrer">Follow for the first look <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="donate" id="good-dog-fund" aria-labelledby="donate-title">
+      <div>
+        <p class="chapter-label">A good turn for good dogs</p>
+        <h2 id="donate-title">Give a shelter dog a hand.</h2>
+        <p>Want to do some good today? Consider supporting the ASPCA, a U.S. animal-welfare organization working to prevent cruelty to animals.</p>
+        <p class="fine-print">Old Dog Bone is not affiliated with the ASPCA. Donations go directly to the organization.</p>
+      </div>
+      <a class="button" href="https://secure.aspca.org/donate/donate" target="_blank" rel="noopener noreferrer">Donate to the ASPCA <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">Old Dog Bone</div>
+    <nav class="social-links" aria-label="Social channels">
+      <a href="https://www.youtube.com/@olddogbone" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+      <a href="https://www.facebook.com/people/olddogbone/61594999376211" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
+      <a href="https://www.instagram.com/olddogbone/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+    </nav>
+    <p class="copyright">© <span id="year">2026</span> Old Dog Bone</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
