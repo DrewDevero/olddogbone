@@ -11,3 +11,6 @@ Public website for the Old Dog Bone brand. This is a static HTML site with no bu
 - Featured YouTube Shorts, social links, a coming-soon merch section, and a direct ASPCA donation link
 
 The official Facebook profile is https://www.facebook.com/olddogbone.
+The footer also links to TikTok at https://www.tiktok.com/@olddogbone and GIPHY at
+https://giphy.com/channel/olddogbone. These are website links only; automated
+pipeline posting to TikTok or GIPHY is not enabled.
