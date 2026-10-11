@@ -272,6 +272,14 @@
     .donate p { max-width: 650px; margin-bottom: 0; }
     .donate .button { flex-shrink: 0; }
     .fine-print { margin-top: 12px !important; font-size: 11px; }
+    .business-inquiries {
+      padding: 58px clamp(24px, 9vw, 136px);
+      background: var(--blue);
+      scroll-margin-top: 76px;
+    }
+    .business-inquiries h2 { font-size: clamp(30px, 3.5vw, 46px); }
+    .business-inquiries p { max-width: 650px; }
+    .business-inquiries .button { overflow-wrap: anywhere; }
     .site-footer {
       display: flex;
       align-items: center;
@@ -453,16 +461,24 @@
       </div>
       <a class="button" href="https://secure.aspca.org/donate/donate" target="_blank" rel="noopener noreferrer">Donate to the ASPCA <span aria-hidden="true">↗</span></a>
     </section>
+
+    <section class="business-inquiries" id="contact" aria-labelledby="contact-title">
+      <p class="chapter-label">Get in touch</p>
+      <h2 id="contact-title">Business inquiries &amp; partnerships</h2>
+      <p>Have a collaboration, sponsorship, or partnership in mind? Tell us a little about your idea and how Old Dog Bone can be part of it.</p>
+      <a class="button" href="mailto:contact@olddogbone.com">contact@olddogbone.com</a>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-brand">Old Dog Bone</div>
-    <nav class="social-links" aria-label="Social channels">
+    <nav class="social-links" aria-label="Social channels and contact">
       <a href="https://www.youtube.com/@olddogbone" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
       <a href="https://www.facebook.com/olddogbone" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
       <a href="https://www.instagram.com/olddogbone/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
       <a href="https://www.tiktok.com/@olddogbone" target="_blank" rel="noopener noreferrer">TikTok <span aria-hidden="true">↗</span></a>
       <a href="https://giphy.com/channel/olddogbone" target="_blank" rel="noopener noreferrer">GIPHY <span aria-hidden="true">↗</span></a>
+      <a href="mailto:contact@olddogbone.com">Contact</a>
     </nav>
     <p class="copyright">© <span id="year">2026</span> Old Dog Bone</p>
   </footer>
