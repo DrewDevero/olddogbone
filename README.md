@@ -9,6 +9,7 @@ Public website for the Old Dog Bone brand. This is a static HTML site with no bu
 - Old Dougherty Dog, Ol' Boy, and Boy Ol' Boy
 - Pack Pursuit, a free three-world catch-and-dodge arcade game
 - Featured YouTube Shorts, social links, a coming-soon merch section, and a direct ASPCA donation link
+- A silent, looping GIPHY banner video behind the hero content with identical opening and closing frames, porthole hero artwork, and an Ol’ Boy video with a speech-bubble link to the GIPHY channel; both videos respect reduced-motion preferences
 - Business-inquiry and partnership section, plus a footer Contact link, both using
   `mailto:contact@olddogbone.com`. No contact form or email-sending service is required.
 
