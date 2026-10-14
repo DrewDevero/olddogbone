@@ -1,1 +1,8 @@
 assets/images/logos/OldDogBone_Giphy_Banner_GIF.png
+.DS_Store
+**/.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+.neon
