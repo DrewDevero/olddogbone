@@ -19,5 +19,5 @@ published on the website.
 
 The official Facebook profile is https://www.facebook.com/olddogbone.
 The footer also links to TikTok at https://www.tiktok.com/@olddogbone and GIPHY at
-https://giphy.com/channel/olddogbone. These are website links only; automated
+https://giphy.com/olddogbone. These are website links only; automated
 pipeline posting to TikTok or GIPHY is not enabled.
